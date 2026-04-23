@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Referencia de Modulos &#8212; Documentacion Proyecto ISS - Actividad 5.3</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=4936afed"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Guia de Uso" href="uso.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="referencia-de-modulos">
+<h1>Referencia de Modulos<a class="headerlink" href="#referencia-de-modulos" title="Link to this heading">¶</a></h1>
+<section id="module-main">
+<span id="modulo-principal-de-interfaz"></span><h2>Modulo principal de interfaz<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.App">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">App</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.App" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Aplicación principal con dos paneles:
+- No optimizado
+- Optimizado</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="main.App.setup_panel">
+<span class="sig-name descname"><span class="pre">setup_panel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accent_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.App.setup_panel" title="Link to this definition">¶</a></dt>
+<dd><p>Configura un panel visual con métricas, datos y acciones.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.App.update_data">
+<span class="sig-name descname"><span class="pre">update_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.App.update_data" title="Link to this definition">¶</a></dt>
+<dd><p>Programa la actualización sin bloquear la UI.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.App.show_help">
+<span class="sig-name descname"><span class="pre">show_help</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.App.show_help" title="Link to this definition">¶</a></dt>
+<dd><p>Muestra docstring de la función.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.App.on_close">
+<span class="sig-name descname"><span class="pre">on_close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.App.on_close" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api">
+<span id="cliente-de-api"></span><h2>Cliente de API<a class="headerlink" href="#module-api" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.get_iss_position">
+<span class="sig-prename descclassname"><span class="pre">api.</span></span><span class="sig-name descname"><span class="pre">get_iss_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.get_iss_position" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene la posición actual de la ISS desde una API pública.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>dict: latitud y longitud</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.get_iss_positions_parallel">
+<span class="sig-prename descclassname"><span class="pre">api.</span></span><span class="sig-name descname"><span class="pre">get_iss_positions_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.get_iss_positions_parallel" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene varias posiciones de la ISS en paralelo para reducir latencia total.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>count (int): número de muestras.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list[dict]: posiciones de la ISS</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-no_opt">
+<span id="version-no-optimizada"></span><h2>Version no optimizada<a class="headerlink" href="#module-no_opt" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="no_opt.obtener_datos_no_opt">
+<span class="sig-prename descclassname"><span class="pre">no_opt.</span></span><span class="sig-name descname"><span class="pre">obtener_datos_no_opt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#no_opt.obtener_datos_no_opt" title="Link to this definition">¶</a></dt>
+<dd><p>Versión NO optimizada:
+- Repite cálculos
+- Usa listas innecesarias
+- Múltiples bucles</p>
+</dd></dl>
+
+</section>
+<section id="module-opt">
+<span id="version-optimizada"></span><h2>Version optimizada<a class="headerlink" href="#module-opt" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.obtener_datos_opt">
+<span class="sig-prename descclassname"><span class="pre">opt.</span></span><span class="sig-name descname"><span class="pre">obtener_datos_opt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opt.obtener_datos_opt" title="Link to this definition">¶</a></dt>
+<dd><p>Versión optimizada:
+- Minimiza I/O remoto: una sola llamada a la API
+- Reutiliza la muestra para comparativa visual
+- Cálculo directo sin estructuras intermedias costosas</p>
+</dd></dl>
+
+</section>
+<section id="module-profiler_utils">
+<span id="utilidades-de-profiling"></span><h2>Utilidades de profiling<a class="headerlink" href="#module-profiler_utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="profiler_utils.profile_function">
+<span class="sig-prename descclassname"><span class="pre">profiler_utils.</span></span><span class="sig-name descname"><span class="pre">profile_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#profiler_utils.profile_function" title="Link to this definition">¶</a></dt>
+<dd><p>Ejecuta profiling sobre una función.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>tuple: (resultado función, string profiling)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Actividad 5.3 entornos</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Secciones</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arquitectura.html">Arquitectura del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uso.html">Guia de Uso</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Referencia de Modulos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-main">Modulo principal de interfaz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api">Cliente de API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-no_opt">Version no optimizada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-opt">Version optimizada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-profiler_utils">Utilidades de profiling</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="uso.html" title="capítulo anterior">Guia de Uso</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Daniel Espinosa.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/modulos.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

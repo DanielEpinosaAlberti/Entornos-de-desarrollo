@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Guia de Uso &#8212; Documentacion Proyecto ISS - Actividad 5.3</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=4936afed"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Referencia de Modulos" href="modulos.html" />
+    <link rel="prev" title="Arquitectura del Sistema" href="arquitectura.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="guia-de-uso">
+<h1>Guia de Uso<a class="headerlink" href="#guia-de-uso" title="Link to this heading">¶</a></h1>
+<section id="requisitos">
+<h2>Requisitos<a class="headerlink" href="#requisitos" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python 3.10 o superior.</p></li>
+<li><p>Dependencia externa: <code class="docutils literal notranslate"><span class="pre">requests</span></code>.</p></li>
+</ul>
+</section>
+<section id="instalacion">
+<h2>Instalacion<a class="headerlink" href="#instalacion" title="Link to this heading">¶</a></h2>
+<p>Desde la raiz del proyecto:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>requests
+</pre></div>
+</div>
+</section>
+<section id="ejecucion">
+<h2>Ejecucion<a class="headerlink" href="#ejecucion" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py
+</pre></div>
+</div>
+<p>La aplicacion abre una interfaz con:</p>
+<ul class="simple">
+<li><p>Panel NO OPTIMIZADO</p></li>
+<li><p>Panel OPTIMIZADO</p></li>
+<li><p>Graficos en vivo de tiempo y latitud</p></li>
+</ul>
+</section>
+<section id="interpretacion-de-resultados">
+<h2>Interpretacion de resultados<a class="headerlink" href="#interpretacion-de-resultados" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Tiempo</span></code>: duracion por ciclo de consulta y procesamiento.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Promedio</span> <span class="pre">lat</span></code>: media de latitudes calculada por cada estrategia.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Top</span> <span class="pre">Profiling</span></code>: resumen de funciones con mayor costo acumulado.</p></li>
+<li><p>Graficos:</p>
+<ul>
+<li><p>Tiempo (ms): compara latencia entre estrategias.</p></li>
+<li><p>Latitud promedio: muestra estabilidad/variacion del dato procesado.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="notas-operativas">
+<h2>Notas operativas<a class="headerlink" href="#notas-operativas" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>La app actualiza cada 3 segundos.</p></li>
+<li><p>El profiling se ejecuta en ciclos alternos para mantener fluidez.</p></li>
+<li><p>Si falla la API, se usa el ultimo valor valido conocido como fallback.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Actividad 5.3 entornos</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Secciones</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arquitectura.html">Arquitectura del Sistema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guia de Uso</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requisitos">Requisitos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion">Instalacion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejecucion">Ejecucion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interpretacion-de-resultados">Interpretacion de resultados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notas-operativas">Notas operativas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modulos.html">Referencia de Modulos</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="arquitectura.html" title="capítulo anterior">Arquitectura del Sistema</a></li>
+      <li>Next: <a href="modulos.html" title="próximo capítulo">Referencia de Modulos</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Daniel Espinosa.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/uso.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
